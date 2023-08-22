@@ -20,7 +20,7 @@ resource "aws_iam_role" "test_role" {
       Version = "2012-10-17"
       Statement = [
         {
-          Action   = ["s3:Get"]
+          Action   = ["s3:Get*"]
           Effect   = "Allow"
           Resource = "${aws_s3_bucket.example.arn}/*"
         }
