@@ -35,6 +35,12 @@ mkdir -p ~/.ssh
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
 aws s3api put-object --bucket ${aws_s3_bucket.example.id} --key id_rsa --body ~/.ssh/id_rsa
+
+echo "Hello World!" > /usr/share/nginx/html/index.html
+echo "Sorry Charlie." > /usr/share/nginx/html/error.html
+
+mkdir -p /usr/share/nginx/html/docs
+echo "We don't have docs yet." > /usr/share/nginx/html/docs/index.html
 EOF
 }
 
